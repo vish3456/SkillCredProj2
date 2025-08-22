@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+trafilatura
+requests
+google-generativeai
+transformers
+torch
+pydantic
+python-dotenv
+httpx
+beautifulsoup4
