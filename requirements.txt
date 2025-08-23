@@ -9,3 +9,5 @@ pydantic
 python-dotenv
 httpx
 beautifulsoup4
+flask
+gunicorn
