@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 from newspaper import Article
 from transformers import pipeline
+import  os
+
 app = Flask(__name__)
 
 summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
@@ -99,5 +101,5 @@ def compare_sources():
     return jsonify({"results": results})
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
